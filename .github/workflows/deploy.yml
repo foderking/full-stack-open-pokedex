@@ -27,7 +27,6 @@ jobs:
           rollbackonhealthcheckfailed: true
 
   tag_new_version:
-    needs: simple_deployment_pipeline
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
