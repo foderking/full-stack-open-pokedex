@@ -21,7 +21,7 @@ jobs:
           node-version: "12.x"
       - name: 'deploy to heroku'
         if: ${{ github.event_name == 'push' }} && ${{ !contains(join(toJson(github.event.commits.*.message)), '#skip')}}
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "polar-harbor-58989" #Must be unique in Heroku
